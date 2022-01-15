@@ -1,4 +1,8 @@
-body {	font-family: sans-serif; }
+body {
+	font-family: sans-serif;
+	color: white;
+	background-color: black;
+}
 h1 {
 	font-family: serif;
 	font-size: 6em;
