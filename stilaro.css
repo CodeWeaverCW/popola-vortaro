@@ -11,6 +11,9 @@ h1 {
 	font-size: 6em;
 }
 
+aside {
+	float: right;
+}
 section.difino {
 	margin-left: 2px;
 	margin-right: 2px;
