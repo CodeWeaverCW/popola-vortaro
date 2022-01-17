@@ -14,13 +14,16 @@
 		<header style="background-color:#00CC22">
 			<h1>LA POPOLA VORTARO</h1>
 			<h3>
-				serĉi <input id="vorto" type="text" list="trafoj">
+				serĉi <input id="serĉvorto" type="text" list="trafoj">
 				<datalist id="trafoj"></datalist>
-				<button onclick="window.location.assign(document.getElementById('vorto').value);">
+				<button onclick="window.location.assign(document.getElementById('serĉvorto').value);">
 					iri
 				</button>
 			</h3>
 		</header>
 		<hr>
+		<main>
+			<h2>Ĵus aktualigitaj:</h2>
+		</main>
 	</body>
 </html>
