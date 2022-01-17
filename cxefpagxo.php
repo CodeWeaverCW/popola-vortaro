@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="eo">
 	<head>
 		<title>Popola Vortaro</title>
 		<link rel="stylesheet" href="stilaro.css">
