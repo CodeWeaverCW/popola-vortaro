@@ -3,6 +3,7 @@
 	<head>
 		<title>Popola Vortaro</title>
 		<link rel="stylesheet" href="stilaro.css">
+		<meta charset="UTF-8">
 	</head>
 	<body>
 		<header style="background-color:#00CC22">
