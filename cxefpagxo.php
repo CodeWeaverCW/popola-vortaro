@@ -4,6 +4,11 @@
 		<title>Popola Vortaro</title>
 		<link rel="stylesheet" href="stilaro.css">
 		<meta charset="UTF-8">
+		<meta name="description"
+			content="Via vortaro — la komunume regata fonto enreta de difinoj k rilatoj pri ĉiaj terminoj!">
+		<meta name="keywords" content="esperanto, EO, la popola vortaro, popola, vortaro">
+		<meta name="author" content='Logan HALL "CodeWeaver"'>
+		<meta name="robots" content="index,nofollow">
 	</head>
 	<body>
 		<header style="background-color:#00CC22">
