@@ -3,6 +3,9 @@ body {
 	color: white;
 	background-color: black;
 }
+header {
+	text-align: center;
+}
 h1 {
 	font-family: serif;
 	font-size: 6em;
