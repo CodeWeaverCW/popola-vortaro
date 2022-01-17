@@ -11,7 +11,7 @@
 		<meta name="robots" content="index,nofollow">
 	</head>
 	<body>
-		<header style="background-color:#00CC22">
+		<header style="background-image:linear-gradient(0deg,black,#00CC22)">
 			<h1>LA POPOLA VORTARO</h1>
 			<h3>
 				serĉi <input id="serĉvorto" type="text" list="trafoj">
