@@ -20,3 +20,7 @@ section.difino {
 	padding: .35em .75em .625em .75em;
 	border: 2px groove;
 }
+
+.new {
+	background-color: blue;
+}
