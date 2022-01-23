@@ -21,23 +21,41 @@ CREATE TABLE terminoj (
 CREATE TABLE difinoj (
 	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	difino VARCHAR(21000) NOT NULL,
-	difininto INT, FOREIGN KEY (difininto) REFERENCES uzantoj(ID)
+	uzanto_ID INT NOT NULL, FOREIGN KEY (uzanto_ID) REFERENCES uzantoj(ID),
+	termino_ID INT NOT NULL, FOREIGN KEY (termino_ID) REFERENCES terminoj(ID),
+	dato DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE tradukoj (
+	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	termino_ID INT NOT NULL, FOREIGN KEY (termino_ID) REFERENCES terminoj(ID),
+	lingvo VARCHAR(254) NOT NULL,
+	traduko VARCHAR(254) NOT NULL
+);
+
+CREATE TABLE kolektoj (
+	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	uzanto_ID INT NOT NULL, FOREIGN KEY (uzanto_ID) REFERENCES uzantoj(ID),
+	nomo VARCHAR(254) NOT NULL
+);
+
+CREATE TABLE kolekto_enhavoj (
+	kolekto_ID INT NOT NULL, FOREIGN KEY (kolekto_ID) REFERENCES kolektoj(ID),
+	termino_ID INT NOT NULL, FOREIGN KEY (termino_ID) REFERENCES terminoj(ID)
 );
 
 CREATE TABLE voĉdonoj_difinojn (
-	aproba BOOLEAN,
+	aproba BOOLEAN NOT NULL,
 	uzanto_ID INT NOT NULL, FOREIGN KEY (uzanto_ID) REFERENCES uzantoj(ID),
-	difino_ID INT NOT NULL, FOREIGN KEY (difino_ID) REFERENCES difinoj(ID)
+	difino_ID INT NOT NULL, FOREIGN KEY (difino_ID) REFERENCES difinoj(ID),
+	PRIMARY KEY (uzanto_ID, difino_ID)
 );
 
 CREATE TABLE voĉdonoj_rilatojn (
-	aproba BOOLEAN,
+	aproba BOOLEAN NOT NULL,
 	uzanto_ID INT NOT NULL, FOREIGN KEY (uzanto_ID) REFERENCES uzantoj(ID),
 	rilato_ID INT NOT NULL,
-);
-
-CREATE TABLE protokolo (
-	
+	PRIMARY KEY (uzanto_ID, rilato_ID)
 );
 
 
