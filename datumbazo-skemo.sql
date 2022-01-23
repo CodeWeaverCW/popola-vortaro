@@ -14,30 +14,26 @@ CREATE TABLE uzantoj (
 );
 
 CREATE TABLE terminoj (
-
-);
-
-CREATE TABLE etikedoj (
-	nomo ENUM(),
-	valoro VARCHAR(255),
-	ID_termina 
-	PRIMARY KEY (nomo,)
+	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	termino VARCHAR(254) NOT NULL
 );
 
 CREATE TABLE difinoj (
-
-);
-
-CREATE TABLE voĉdonoj_etikedojn (
-
+	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	difino VARCHAR(21000) NOT NULL,
+	difininto INT, FOREIGN KEY (difininto) REFERENCES uzantoj(ID)
 );
 
 CREATE TABLE voĉdonoj_difinojn (
-
+	aproba BOOLEAN,
+	uzanto_ID INT NOT NULL, FOREIGN KEY (uzanto_ID) REFERENCES uzantoj(ID),
+	difino_ID INT NOT NULL, FOREIGN KEY (difino_ID) REFERENCES difinoj(ID)
 );
 
-CREATE TABLE voĉdonoj_rilatojn ( /* NE CERTE */
-
+CREATE TABLE voĉdonoj_rilatojn (
+	aproba BOOLEAN,
+	uzanto_ID INT NOT NULL, FOREIGN KEY (uzanto_ID) REFERENCES uzantoj(ID),
+	rilato_ID INT NOT NULL,
 );
 
 CREATE TABLE protokolo (
