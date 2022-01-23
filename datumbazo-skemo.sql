@@ -28,18 +28,21 @@ CREATE TABLE difinoj (
 
 );
 
-CREATE TABLE vocxdonoj_etikedojn (
+CREATE TABLE voĉdonoj_etikedojn (
 
 );
 
-CREATE TABLE vocxdonoj_difinojn (
+CREATE TABLE voĉdonoj_difinojn (
 
 );
 
-CREATE TABLE vocxdonoj_rilatojn ( /* NE CERTE */
+CREATE TABLE voĉdonoj_rilatojn ( /* NE CERTE */
 
 );
 
 CREATE TABLE protokolo (
 	
 );
+
+
+CREATE USER gasto;
